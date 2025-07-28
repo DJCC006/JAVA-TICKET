@@ -8,6 +8,16 @@ package com.mycompany.java.ticket;
  *
  * @author David
  */
-public class eventoReligioso {
+public class eventoReligioso extends eventoBase {
+    private int cantMax= 30000;
+    private int seguro = 2000;
     
+    //getters
+    public int getcantMax(){
+        return cantMax;
+    }
+    
+    public int getSeguro(){
+        return seguro;
+    }
 }
