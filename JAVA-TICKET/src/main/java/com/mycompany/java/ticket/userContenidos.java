@@ -10,5 +10,10 @@ import java.util.ArrayList;
  */
 public class userContenidos extends userBase{
     ArrayList<Integer> registroEventos = new ArrayList<Integer>();
+    private TypUsers tipoUsuario = TypUsers.CONTENIDOS;
     
+    //getters
+    public TypUsers getTipo(){
+        return tipoUsuario;
+    }
 }

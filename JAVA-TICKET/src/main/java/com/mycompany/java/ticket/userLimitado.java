@@ -9,5 +9,10 @@ package com.mycompany.java.ticket;
  * @author David
  */
 public class userLimitado extends userBase {
+    private TypUsers tipoUsuario= TypUsers.LIMITADOS;
     
+    //getter
+    public TypUsers getTipo(){
+        return tipoUsuario;
+    }
 }

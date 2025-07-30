@@ -12,5 +12,8 @@ public class JAVATICKET {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
+        userContenidos user1= new userContenidos();
+        Sesion.getInstancia().setUsuarioActual(user1);
+        
     }
 }

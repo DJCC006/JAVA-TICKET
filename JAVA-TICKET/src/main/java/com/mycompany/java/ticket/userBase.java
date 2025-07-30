@@ -49,4 +49,12 @@ public abstract class userBase {
         return edad;
     }
     
+    
+    enum TypUsers{
+        ADMINISTRADOR,
+        CONTENIDOS,
+        LIMITADOS
+    }
+    
+    
 }
