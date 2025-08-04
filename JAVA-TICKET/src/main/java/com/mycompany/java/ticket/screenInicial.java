@@ -15,7 +15,8 @@ import java.awt.Font;
  * @author David
  */
 public class screenInicial {
-    public static void main(String[] args) {
+    
+    public screenInicial(){
         JFrame Inicio = new JFrame();
         Inicio.setSize(351, 478);
         Inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,6 +35,8 @@ public class screenInicial {
           @Override 
           public void actionPerformed(ActionEvent e){
               System.out.println("Se entra a la pagina de log in");
+              screenLogIn logIn= new screenLogIn();
+              Inicio.dispose();
           }
                     
         });
@@ -53,9 +56,11 @@ public class screenInicial {
         
         Inicio.setVisible(true);
         
+    }
+    
+    
+    public static void main(String[] args) {
+        screenInicial inicio = new screenInicial();
         
-        
-        
-        //351, 478
     }
 }
