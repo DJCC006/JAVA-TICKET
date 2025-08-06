@@ -19,7 +19,7 @@ public class screenInicial {
     public screenInicial(){
         JFrame Inicio = new JFrame();
         Inicio.setSize(351, 478);
-        Inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Inicio.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Inicio.setLocationRelativeTo(null);
         Inicio.setResizable(false);
         Inicio.setLayout(null);

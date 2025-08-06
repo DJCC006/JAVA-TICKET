@@ -14,7 +14,15 @@ public class userDataBase {
     
     //Constructor
     public userDataBase(){
+        //Crea el array list general
         UserBank = new ArrayList<userBase>();
+        
+        //Creacion y agregado del usuario admin inicial
+        userBase primitivo = new userAdministrador();
+        primitivo.setUsername("admin");
+        primitivo.setNombre("ADMIN");
+        primitivo.setPassword("supersecreto");
+        UserBank.add(primitivo);
     }
     
     //Recordar que el arraylist ya trae por defecto la propiedad de add, get, remove
@@ -32,6 +40,8 @@ public class userDataBase {
         }
         return null;
     }//Metodo que expande el alcance de poder buscar al usuario en el array list mediante el nombre de usuario
+    
+    
     
     
     

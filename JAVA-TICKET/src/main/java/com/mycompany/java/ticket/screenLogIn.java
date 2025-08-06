@@ -20,7 +20,7 @@ public class screenLogIn {
     public screenLogIn(){
         JFrame LogIn = new JFrame();
         LogIn.setSize(351, 478);
-        LogIn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        LogIn.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         LogIn.setLocationRelativeTo(null);
         LogIn.setResizable(false);
         LogIn.setLayout(null);
@@ -43,6 +43,27 @@ public class screenLogIn {
         ingresar.addActionListener(new ActionListener(){
           @Override 
           public void actionPerformed(ActionEvent e){
+              String name =ingresoUsuario.getText();
+              String password = ingresoContra.getText();
+              
+              
+              userBase temporal= BaseDatos.getInstancia().getBaseActual().buscarMandar(name);
+              if(temporal!= null){
+                  String actualname= temporal.getNombre();
+                  System.out.println(actualname);
+                  if(temporal.getPassword().equals(password)){
+                      System.out.println("INICIO DE SESION EXITOSO");
+                      screenMenu Menu = new screenMenu();
+                      LogIn.dispose();
+                  }else{
+                      System.out.println("Contraseña incorrecta");
+                  }
+              }else{
+                  System.out.println("No existe el usuario");
+              }
+              
+              
+              
               System.out.println("Se ejecuta el proceso de hacer Log In");
           }
                     

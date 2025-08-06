@@ -11,10 +11,8 @@ package com.mycompany.java.ticket;
 public class JAVATICKET {
 
     public static void main(String[] args) {
-        //System.out.println("Hello World!");
-        //userContenidos user1= new userContenidos();
-        //Sesion.getInstancia().setUsuarioActual(user1);
-        
-
+     userDataBase dbPrincipal = new userDataBase();//Creacion de base de datos
+     BaseDatos.getInstancia().setBaseActual(dbPrincipal); //Controlador de base de datos
+     screenInicial inicio = new screenInicial(); //ventana de login
     }
 }
