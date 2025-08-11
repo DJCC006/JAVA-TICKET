@@ -14,6 +14,7 @@ public abstract class userBase {
     private String username;
     private String password;
     private int edad;
+    private TypUsers type;
     
     //setters
     public void setNombre(String nombre){
@@ -32,6 +33,11 @@ public abstract class userBase {
         this.edad=edad;
     }
     
+    public void setTipo(TypUsers tipo){
+        type=tipo;
+    }
+    
+    
     //getters
     public String getNombre(){
         return nombre;
@@ -48,6 +54,14 @@ public abstract class userBase {
     public int getEdad(){
         return edad;
     }
+    
+    public TypUsers getTipo(){
+        return type;
+    }
+    
+    
+    
+    
     
     
     enum TypUsers{

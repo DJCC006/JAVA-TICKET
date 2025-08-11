@@ -146,6 +146,24 @@ public class windowCrearUser {
                       
                       if(ver2==true && ver3==true && ver4==true){
                           System.out.println("Se procede a guardar la info del usuario");
+                          //int ubicacion= BaseDatos.getInstancia().getBaseActual().UserBank.size()-1;
+                          String name=ingnombre.getText();
+                          String username=ingusername.getText();
+                          String pass=ingpassword.getText();
+                          int age= Integer.parseInt(ingedad.getText());
+                          
+                          userBase reciente = BaseDatos.getInstancia().getBaseActual().UserBank.getLast();
+                          reciente.setNombre(name);
+                          reciente.setUsername(username);
+                          reciente.setPassword(pass);
+                          reciente.setEdad(age);
+                          
+                          
+                          System.out.println(reciente.getNombre());
+                          System.out.println(reciente.getEdad());
+                          System.out.println(reciente.getUsername());
+                          System.out.println(reciente.getTipo());
+                          
                           ingusername.setText("");
                           ingnombre.setText("");
                           ingpassword.setText("");
@@ -170,6 +188,8 @@ public class windowCrearUser {
         regresar.addActionListener(new ActionListener(){
           @Override 
           public void actionPerformed(ActionEvent e){
+              crUser.dispose();
+              screenMenu menu = new screenMenu();
               
           }
                     

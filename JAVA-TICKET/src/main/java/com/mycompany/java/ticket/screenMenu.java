@@ -48,7 +48,9 @@ public class screenMenu {
         AdminUsuarios.addActionListener(new ActionListener(){
           @Override 
           public void actionPerformed(ActionEvent e){
-              System.out.println("Se ejecuta el proceso B");
+              windowPostUser previo = new windowPostUser();
+              Menu.dispose();
+              
           }
                     
         });
