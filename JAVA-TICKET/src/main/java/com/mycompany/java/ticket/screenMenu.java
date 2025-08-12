@@ -48,7 +48,7 @@ public class screenMenu {
         AdminUsuarios.addActionListener(new ActionListener(){
           @Override 
           public void actionPerformed(ActionEvent e){
-              windowPostUser previo = new windowPostUser();
+              screenSubMenuUsers previo = new screenSubMenuUsers();
               Menu.dispose();
               
           }

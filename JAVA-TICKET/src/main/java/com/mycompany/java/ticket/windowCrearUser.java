@@ -189,7 +189,7 @@ public class windowCrearUser {
           @Override 
           public void actionPerformed(ActionEvent e){
               crUser.dispose();
-              screenMenu menu = new screenMenu();
+              screenSubMenuUsers menu = new screenSubMenuUsers();
               
           }
                     
