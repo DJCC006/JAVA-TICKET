@@ -1,0 +1,85 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.java.ticket;
+import java.awt.Frame;
+import  javax.swing.*;
+import javax.swing.JTextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.BorderLayout;
+import java.awt.Font;
+/**
+ *
+ * @author David
+ */
+public class windowCrearEvento {
+    
+    public windowCrearEvento(){
+        JFrame crEvent = new JFrame();
+        crEvent.setSize(612, 433);
+        crEvent.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        crEvent.setLocationRelativeTo(null);
+        crEvent.setResizable(false);
+        crEvent.setLayout(null);
+        
+        
+        JLabel titulo= new JLabel("Nuevo Evento");
+        titulo.setBounds(206, 0, 300, 80);
+        titulo.setFont(new Font("Segoe UI", Font.BOLD, 20));
+        crEvent.add(titulo);
+        
+        
+        JLabel codetag= new JLabel("Codigo de Evento: ");
+        codetag.setBounds(30, 50, 200, 80);
+        codetag.setFont(new Font("Segoe UI",Font.ITALIC, 15));
+        crEvent.add(codetag);
+        
+        
+        JTextField ingcode = new JTextField("code ici");
+        ingcode.setBounds(150, 80, 150, 25);
+        crEvent.add(ingcode);
+        
+        
+        JLabel nametag= new JLabel("Nombre Evento: ");
+        nametag.setBounds(30, 105, 300, 80);
+        nametag.setFont(new Font("Segoe UI",Font.ITALIC, 15));
+        crEvent.add(nametag);
+        
+        JTextField ingname = new JTextField("name ici");
+        ingname.setBounds(150, 135, 150, 25);
+        crEvent.add(ingname);
+        
+        
+        
+        JLabel datetag= new JLabel("Fecha Evento: ");
+        datetag.setBounds(330, 50, 300, 80);
+        datetag.setFont(new Font("Segoe UI",Font.ITALIC, 15));
+        crEvent.add(datetag);
+        
+        /*
+        JTextField ingname = new JTextField("name ici");
+        ingname.setBounds(150, 135, 150, 25);
+        crEvent.add(ingname);
+        */
+        
+        
+        JLabel rentatag= new JLabel("Monto de Renta: ");
+        rentatag.setBounds(330, 105, 300, 80);
+        rentatag.setFont(new Font("Segoe UI",Font.ITALIC, 15));
+        crEvent.add(rentatag);
+        
+        
+        
+        crEvent.setVisible(true);
+        
+        
+        
+    }
+    
+    public static void main(String[] args) {
+        windowCrearEvento ventana = new windowCrearEvento();
+        
+    }
+}

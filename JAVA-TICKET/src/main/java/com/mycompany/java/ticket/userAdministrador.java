@@ -9,12 +9,16 @@ import java.util.ArrayList;
  * @author David
  */
 public class userAdministrador extends userBase {
-    ArrayList<Integer> registroEventos = new ArrayList<Integer>();
+    ArrayList<eventoBase> registroEventos = new ArrayList<eventoBase>();
     private TypUsers tipoUsuario = TypUsers.ADMINISTRADOR;   
         
     //getter
     public TypUsers getTipo(){
         return tipoUsuario;
+    }
+    
+    public ArrayList getRegistroEventos(){
+        return registroEventos;
     }
     
 }

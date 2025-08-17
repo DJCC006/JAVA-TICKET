@@ -10,15 +10,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.BorderLayout;
 import java.awt.Font;
-
-
 /**
  *
  * @author David
  */
-public class screenSubMenuUsers {
-    
-    public screenSubMenuUsers(){
+public class screenSubMenuEventos {
+    public screenSubMenuEventos(){
         JFrame userPage = new JFrame();
         userPage.setSize(351, 478);
         userPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,47 +23,56 @@ public class screenSubMenuUsers {
         userPage.setResizable(false);
         userPage.setLayout(null);
         
-        JLabel titulo= new JLabel("Administracion de Usuarios");
+        JLabel titulo= new JLabel("Administracion de Eventos");
         titulo.setBounds(65, 0, 300, 80);
         titulo.setFont(new Font("Segoe UI", Font.BOLD, 18));
         userPage.add(titulo);
         
-        JButton crearUser = new JButton("Usuario Nuevo");
-        crearUser.setBounds(70, 60, 200, 45);
-        crearUser.addActionListener(new ActionListener(){
+        JButton crearEvento = new JButton("Evento Nuevo");
+        crearEvento.setBounds(70, 60, 200, 45);
+        crearEvento.addActionListener(new ActionListener(){
           @Override 
           public void actionPerformed(ActionEvent e){
-              windowPostUser seleccion = new windowPostUser();
-              userPage.dispose();;
+              System.out.println("Proceso A");
           }
                     
         });
         
         
-        JButton editarUser = new JButton("Editar Usuario");
-        editarUser.setBounds(70, 120, 200, 45);
-        editarUser.addActionListener(new ActionListener(){
+        JButton editarEvento = new JButton("Editar Evento");
+        editarEvento.setBounds(70, 120, 200, 45);
+        editarEvento.addActionListener(new ActionListener(){
           @Override 
           public void actionPerformed(ActionEvent e){
-              windowPreEdicion ventana= new windowPreEdicion();
-              userPage.dispose();
+              System.out.println("Proceso B");
           }
                     
         });
         
-        JButton borrarUser = new JButton("Borrar Usuario");
-        borrarUser.setBounds(70, 180, 200, 45);
-        borrarUser.addActionListener(new ActionListener(){
+        JButton borrarEvento = new JButton("Borrar Evento");
+        borrarEvento.setBounds(70, 180, 200, 45);
+        borrarEvento.addActionListener(new ActionListener(){
           @Override 
           public void actionPerformed(ActionEvent e){
-              windowBorrarUser ventana = new windowBorrarUser();
-              userPage.dispose();
+              System.out.println("Proceso C");
           }
                     
         });
+        
+        
+        JButton verEvento = new JButton("Ver Evento");
+        verEvento.setBounds(70, 240, 200, 45);
+        verEvento.addActionListener(new ActionListener(){
+          @Override 
+          public void actionPerformed(ActionEvent e){
+              System.out.println("Proceso D");
+          }
+                    
+        });
+        
         
          JButton regresar = new JButton("Regresar");
-        regresar.setBounds(70, 240, 200, 45);
+        regresar.setBounds(70, 300, 200, 45);
         regresar.addActionListener(new ActionListener(){
           @Override 
           public void actionPerformed(ActionEvent e){
@@ -76,25 +82,19 @@ public class screenSubMenuUsers {
                     
         });
         
-        
-        
+        userPage.add(crearEvento);
+        userPage.add(editarEvento);
+        userPage.add(borrarEvento);
+        userPage.add(verEvento);
         userPage.add(regresar);
-        userPage.add(borrarUser);
-        userPage.add(editarUser);
-        userPage.add(crearUser);
-        
         userPage.setVisible(true);
         
-        
-        
-        
     }
-    
     
     
     public static void main(String[] args) {
-        screenSubMenuUsers subVentana = new screenSubMenuUsers();
-        
+        screenSubMenuEventos ventana = new screenSubMenuEventos();
     }
+    
     
 }

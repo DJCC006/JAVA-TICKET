@@ -57,7 +57,8 @@ public class screenAdminUsers {
         borrarUser.addActionListener(new ActionListener(){
           @Override 
           public void actionPerformed(ActionEvent e){
-              System.out.println("Se ejecuta el proceso C");
+              windowBorrarUser ventana = new windowBorrarUser();
+              AdminUsers.dispose();
           }
                     
         });

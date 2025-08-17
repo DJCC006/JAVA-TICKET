@@ -38,7 +38,8 @@ public class screenMenu {
         AdminEventos.addActionListener(new ActionListener(){
           @Override 
           public void actionPerformed(ActionEvent e){
-              System.out.println("Se ejecuta el proceso A");
+              screenSubMenuEventos ventana = new screenSubMenuEventos();
+              Menu.dispose();
           }
                     
         });
