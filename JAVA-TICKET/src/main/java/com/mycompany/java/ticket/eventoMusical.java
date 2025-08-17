@@ -11,6 +11,9 @@ package com.mycompany.java.ticket;
 public class eventoMusical extends eventoBase {
     private int cantMax = 25000;
     private double seguro;
+    private TypeMusic TypeMusic;
+    private TypEvent TypeEvent= TypEvent.MUSICAL;
+    
     
     enum TypeMusic{
         POP,
@@ -26,12 +29,26 @@ public class eventoMusical extends eventoBase {
         seguro= renta*0.30;
     }//probablemente se ha de cambiar y se puede pasar al constructor
     
+    public void setTypeMusic(TypeMusic tipo){
+        TypeMusic=tipo;
+    }
+    
+    //Getters
+    public TypeMusic  getTypeMusic(){
+        return TypeMusic;
+    }
+    
+    
     public int getcantMax(){
         return cantMax;
     }
     
     public double getSeguro(){
         return seguro;
+    }
+    
+    public TypEvent getTypeEvent(){
+        return TypeEvent;
     }
     
 }

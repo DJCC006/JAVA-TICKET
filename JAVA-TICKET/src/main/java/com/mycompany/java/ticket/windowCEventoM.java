@@ -15,9 +15,9 @@ import java.awt.Font;
  *
  * @author David
  */
-public class windowCrearEvento {
+public class windowCEventoM {
     
-    public windowCrearEvento(){
+    public windowCEventoM(){
         
         //Detalles generales---------------
         JFrame crEvent = new JFrame();
@@ -86,101 +86,40 @@ public class windowCrearEvento {
         ingcantidad.setBounds(150, 195, 150, 25);
         crEvent.add(ingcantidad);
         
-        JLabel team1tag= new JLabel("Nombre Equipo 1: ");
-        team1tag.setBounds(330, 165, 300, 80);
-        team1tag.setFont(new Font("Segoe UI",Font.ITALIC, 12));
-        crEvent.add(team1tag);
+        JLabel tipotag= new JLabel("Tipo Musical: ");
+        tipotag.setBounds(330, 165, 300, 80);
+        tipotag.setFont(new Font("Segoe UI",Font.ITALIC, 14));
+        crEvent.add(tipotag);
         
-        JTextField ingteam1 = new JTextField("team 1");
-        ingteam1.setBounds(430, 195, 150, 25);
-        crEvent.add(ingteam1);
-        
-        
-        JLabel team2tag= new JLabel("Nombre Equipo 2: ");
-        team2tag.setBounds(330, 205, 300, 80);
-        team2tag.setFont(new Font("Segoe UI",Font.ITALIC, 12));
-        crEvent.add(team2tag);
-        
-        JTextField ingteam2 = new JTextField("team 2");
-        ingteam2.setBounds(430, 235, 150, 25);
-        crEvent.add(ingteam2);
-        
+        String[] items= {"POP", "ROCK", "CLASSICA", "RAP", "REGGEATON", "OTRO"};
+        JComboBox<String> tipos = new JComboBox<>(items);
+        tipos.setBounds(430, 195, 150, 25);
+        crEvent.add(tipos);
+       
+        //POP, ROCK, CLASSICA, RAP, REGGEATON, OTRO
         
         JLabel desctag= new JLabel("Descripcion de Evento: ");
-        desctag.setBounds(30, 265, 300, 80);
+        desctag.setBounds(30, 225, 300, 80);
         desctag.setFont(new Font("Segoe UI",Font.ITALIC, 13));
         crEvent.add(desctag);
         
-        
         JTextField ingdesc = new JTextField("Descripcion del evento");
-        ingdesc.setBounds(160, 295, 385, 25);
+        ingdesc.setBounds(160, 255, 385, 25);
         crEvent.add(ingdesc);
         
-        
-        
-        
-        JLabel typetag= new JLabel("Tipo Deporte: ");
-        typetag.setBounds(30, 205, 300, 80);
-        typetag.setFont(new Font("Segoe UI",Font.ITALIC, 14));
-        crEvent.add(typetag);
-        
-        
-        String[] items= {"FUTBOL", "TENIS", "RUGBY", "BASEBALL"};
-        JComboBox<String> tipos = new JComboBox<>(items);
-        tipos.setBounds(150, 235, 150, 25);
-        crEvent.add(tipos);
-       
-        
-        
-        
-        
-        
-        
-        //Botones----------------
-        JButton regresar = new JButton("Regresar");
-        regresar.setBounds(330, 350, 100, 45);
-        regresar.addActionListener(new ActionListener(){
-          @Override 
-          public void actionPerformed(ActionEvent e){
-              crEvent.dispose();
-              screenSubMenuUsers menu = new screenSubMenuUsers();
-              
-          }
-                    
-        });
-        
-        
-        JButton crearEvento = new JButton("Crear Evento");
-        crearEvento.setBounds(180, 350, 130, 45);
-        crearEvento.addActionListener(new ActionListener(){
-          @Override 
-          public void actionPerformed(ActionEvent e){
-             
-              String code;
-              String nombre;
-              double renta;
-              
-              
-          }
-                    
-        });
-        
-        
-        
-        
-        
-        
-        
-        crEvent.add(crearEvento);
-        crEvent.add(regresar);
         crEvent.setVisible(true);
+        
         
         
         
     }
     
+    
+    
     public static void main(String[] args) {
-        windowCrearEvento ventana = new windowCrearEvento();
-        
+        windowCEventoM ventana = new windowCEventoM();
     }
+    
+    
+    
 }

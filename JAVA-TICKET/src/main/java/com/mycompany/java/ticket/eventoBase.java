@@ -13,6 +13,7 @@ public abstract class eventoBase {
     private String titulo;
     private String descripcion;
     private String fecha;//posblemente cambiar el tipo de dato
+    private TypEvent tipo;
     private double renta;
     
     //Setters
@@ -36,6 +37,10 @@ public abstract class eventoBase {
         this.renta=renta;
     }
     
+    public void setType(TypEvent tipo){
+        this.tipo=tipo;
+    }
+    
     //Getters
     public int getCode(){
         return codigo;
@@ -57,6 +62,14 @@ public abstract class eventoBase {
         return renta;
     }
     
+    public TypEvent getTyp(){
+        return tipo;
+    }
     
+    enum TypEvent{
+        DEPORTIVO,
+        MUSICAL,
+        RELIGIOSO
+    }
     
 }

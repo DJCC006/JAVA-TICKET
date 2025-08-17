@@ -11,6 +11,8 @@ package com.mycompany.java.ticket;
 public class eventoReligioso extends eventoBase {
     private int cantMax= 30000;
     private int seguro = 2000;
+    private TypEvent tipo= TypEvent.RELIGIOSO;
+    
     
     //getters
     public int getcantMax(){
@@ -20,4 +22,10 @@ public class eventoReligioso extends eventoBase {
     public int getSeguro(){
         return seguro;
     }
+    
+    public TypEvent getTipo(){
+        return tipo;
+    }
+    
+    
 }

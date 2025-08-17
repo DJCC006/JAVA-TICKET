@@ -53,9 +53,9 @@ public class windowPostUser {
               System.out.println(typeString);
               
               if(typeString.equals("ADMINISTRADOR")){
-                  userBase newAdmin = new userAdministrador();
-                  TypUsers tipoo= newAdmin.getTipo();
-                  newAdmin.setTipo(tipoo);
+                  userBase newAdmin = new userAdministrador();//Creo usuario
+                  TypUsers tipoo= newAdmin.getTipo();//Obtengo el tipo
+                  newAdmin.setTipo(tipoo);//Se le establece al nuevo objeto el tipo de tipo
                   BaseDatos.getInstancia().getBaseActual().UserBank.add(newAdmin);
                   System.out.println("Se ha agregado un nuevo usuario de tipo administrador");
               }else if(typeString.equals("CONTENIDOS")){
